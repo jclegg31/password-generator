@@ -1,0 +1,81 @@
+/* font-family: 'Inter', sans-serif;
+  font-family: 'Karla', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 550px;
+  height: 550px;
+  background: #1f2937;
+  margin: 100px auto;
+  border-radius: 10px;
+}
+
+.heading-container {
+  padding: 115px 0 20px 52px;
+}
+
+h1 {
+  font-family: 'Karla', sans-serif;
+  color: #fff;
+  font-size: 40px;
+  line-height: 40px;
+  padding-bottom: 10px;
+}
+
+h1 span {
+  color: #4adf86;
+}
+
+h2 {
+  font-family: 'Inter', sans-serif;
+  color: #d5d4d8;
+  font-weight: 400;
+  font-size: 20px;
+  padding-bottom: 45px;
+}
+
+.generatePasswordBtn {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  background-color: #10b981;
+  color: #fff;
+  border: none;
+  width: 191px;
+  height: 42px;
+  padding: 9px, 17px, 9px, 15px;
+  border-radius: 6px;
+}
+
+.line {
+  border: 1px solid #2f3e53;
+  width: 446px;
+  margin: 20px 0 0 52px;
+}
+
+.passwords-container {
+  /* margin: 20px 0 0 52px; */
+  width: 446px;
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0 0 52px;
+}
+
+.passwordOne,
+.passwordTwo {
+  padding: 5px 20px;
+  width: 211px;
+  height: 39px;
+  background-color: #273549;
+  color: #55f991;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  border-radius: 6px;
+}

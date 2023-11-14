@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #ecfdf5;
+}
+
 .container {
   width: 550px;
   height: 550px;

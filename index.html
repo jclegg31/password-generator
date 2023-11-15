@@ -12,19 +12,49 @@
     <title>Password Generator</title>
 </head>
 
-<body>
+<body class="main-body">
     <main class="container">
+        <!-- Toggle theme Button -->
+        <div class="toggle-container">
+            <div class="toggle-btn" onclick="toggle()">
+                <div class="inner-circle"></div>
+            </div>
+            <p class="toggle-label">dark</p>
+        </div>
+
         <section class="heading-container">
-            <h1>Generate a <br /><span>random password</span></h1>
+            <h1 class="heading">Generate a <br /><span class="h1-span">random password</span></h1>
             <h2 class="subheading">Never use an insecure password again.</h2>
-            <button class="generatePasswordBtn">
+        </section>
+
+        <section class="choices-container">
+            <div>
+                <fieldset class="pass-symb-num">
+                    <legend> Customize your password </legend>
+                    <div class="pass-length">
+                        <input type="number" id="pass-number" name="number" min="8" max="15">
+                        <label for="number">Length (8-15)</label>
+                    </div>
+                    <div class="symbols">
+                        <input type="checkbox" id="symbols" name="symbols" checked />
+                        <label for="symbols">Symbols</label>
+                    </div>
+                    <div class="numbers">
+                        <input type="checkbox" id="numbers" name="numbers" checked />
+                        <label for="numbers">Numbers</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <button class="generatePasswordBtn" onclick="generatePasswords()">
                 Generate passwords
             </button>
         </section>
+
         <hr class="line">
         <section class="passwords-container">
-            <button class="passwordOne"> </button>
-            <button class="passwordTwo"> </button>
+            <button id="passwordOne" class="passwordOne" onclick="copyPasswordOne()"> </button>
+            <button id="passwordTwo" class="passwordTwo" onclick="copyPasswordTwo()"> </button>
         </section>
     </main>
 

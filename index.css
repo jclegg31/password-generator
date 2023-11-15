@@ -3,24 +3,119 @@
 
 * {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
   background-color: #ecfdf5;
 }
 
+body.active {
+  background-color: #1f2937;
+}
+
 .container {
   width: 550px;
-  height: 550px;
+  height: 620px;
   background: #1f2937;
   margin: 100px auto;
   border-radius: 10px;
 }
 
+.container.active {
+  background: #ecfdf5;
+}
+
+.toggle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+.toggle-label {
+  margin-top: 5px;
+  margin-right: 15px;
+  font-size: 12px;
+}
+
+.toggle-btn {
+  width: 60px;
+  height: 30px;
+  background-color: #ecfdf5;
+  border-radius: 30px;
+  padding: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.toggle-btn > .inner-circle {
+  width: 20px;
+  height: 20px;
+  background-color: #777;
+  border-radius: 50%;
+  transition: all 300ms ease-in-out;
+}
+
+.toggle-btn.active {
+  background-color: #10b981;
+}
+
+.toggle-btn.active > .inner-circle {
+  margin-left: 30px;
+  background-color: #ecfdf5;
+}
+
+.toggle-label {
+  color: #fff;
+}
+
+.toggle-label.active {
+  color: #10b981;
+}
+
 .heading-container {
-  padding: 115px 0 20px 52px;
+  padding: 25px 0 35px 52px;
+}
+
+.choices-container {
+  padding: 15px 0 10px 52px;
+}
+
+.pass-symb-num {
+  width: 446px;
+  color: #d5d4d8;
+  font-size: 12px;
+  margin-bottom: 25px;
+  padding: 15px 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pass-symb-num.active {
+  color: #2b283a;
+}
+
+.pass-length > input {
+  width: 40px;
+  padding: 3px;
+  margin-right: 5px;
+  border-radius: 3px;
+  border: 0.1px solid #2f3e53;
+  text-align: center;
+}
+
+.symbols > input,
+.numbers > input {
+  margin-right: 7px;
+  accent-color: #10b981;
+}
+
+.symbols,
+.numbers {
+  display: flex;
+  align-items: center;
 }
 
 h1 {
@@ -31,20 +126,30 @@ h1 {
   padding-bottom: 10px;
 }
 
+h1.active {
+  color: #2b283a;
+}
+
 h1 span {
   color: #4adf86;
 }
 
+h1.active span {
+  color: #10b981;
+}
+
 h2 {
-  font-family: 'Inter', sans-serif;
   color: #d5d4d8;
   font-weight: 400;
   font-size: 20px;
-  padding-bottom: 45px;
+  padding-bottom: 15px;
+}
+
+h2.active {
+  color: #6b7280;
 }
 
 .generatePasswordBtn {
-  font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 16px;
   background-color: #10b981;
@@ -60,6 +165,10 @@ h2 {
   border: 1px solid #2f3e53;
   width: 446px;
   margin: 20px 0 0 52px;
+}
+
+.line.active {
+  border: 1px solid #d5d4d8;
 }
 
 .passwords-container {

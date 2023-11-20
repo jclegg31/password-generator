@@ -171,12 +171,15 @@ function noNumArray() {
 //Copy on click passwords
 function copyPasswordOne() {
   let storedPWOne = passOne.textContent;
-  passOne.textContent = 'Copied!';
+  //alert(storedPWOne);
+  passOne.textContent = 'Copied to Clipboard!';
+  const copyContent = navigator.clipboard.writeText(storedPWOne);
 }
 
 function copyPasswordTwo() {
   let storedPWTwo = passTwo.textContent;
-  passTwo.textContent = 'Copied!';
+  passTwo.textContent = 'Copied to Clipboard!!';
+  const copyContent = navigator.clipboard.writeText(storedPWTwo);
 }
 
 //toggle button
